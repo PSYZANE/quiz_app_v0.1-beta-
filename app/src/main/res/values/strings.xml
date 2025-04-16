@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">quizUp</string>
+    <string name="posts_list_description">List of posts</string>
+    <string name="post_content_description">Post content</string>
 </resources>

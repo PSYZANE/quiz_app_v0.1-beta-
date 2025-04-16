@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@mipmap/ic_person"
+            tools:srcCompat="@mipmap/ic_person" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="TextView" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/option_A"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:textSize="18dp"/>
+
+                <RadioButton
+                    android:id="@+id/option_B"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:textSize="18dp"/>
+
+                <RadioButton
+                    android:id="@+id/option_C"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:textSize="18dp"/>
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/postContentTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/post_content_description"
+        android:layout_marginTop="8dp"
+        android:text="sdffs"/>
+
+</LinearLayout>
