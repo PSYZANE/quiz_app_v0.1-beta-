@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Toast exitToast;
+
     //Back function variables
     private boolean doubleBackToExitPressedOnce = false;
     private static final long DOUBLE_BACK_PRESS_DELAY = 2000;//in ms
@@ -52,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 doubleBackToExitPressedOnce = true;
-                Toast.makeText(MainActivity.this, "Please press BACK again to exit",Toast.LENGTH_SHORT).show();
+                exitToast = Toast.makeText(MainActivity.this, "Please press BACK again to exit",Toast.LENGTH_SHORT);
+                exitToast.show();
                 new android.os.Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -61,5 +64,13 @@ public class MainActivity extends AppCompatActivity {
                     }, DOUBLE_BACK_PRESS_DELAY);
             }
         });
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        if(exitToast != null){
+            exitToast.cancel();
+        }
     }
 }
