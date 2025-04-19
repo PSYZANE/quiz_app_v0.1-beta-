@@ -18,6 +18,7 @@
     <string name="email_input">Enter email</string>
     <string name="password_input">Enter a password</string>
     <string name="con_password_input">Re-enter password</string>
+    <string name="forget_password">Forget password?</string>
 
     <!--  login/Registration button  -->
     <string name="login_btn">Login</string>

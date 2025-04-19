@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sky_blue">
@@ -10,11 +11,11 @@
         android:layout_width="340dp"
         android:layout_height="48dp"
         android:layout_marginBottom="24dp"
+        android:background="@drawable/text_view_border"
         android:ems="10"
         android:hint="@string/name_email_input"
         android:inputType="text"
         android:textSize="21sp"
-        android:background="@drawable/text_view_border"
         app:layout_constraintBottom_toTopOf="@+id/password_box"
         app:layout_constraintEnd_toEndOf="@+id/password_box"
         app:layout_constraintStart_toStartOf="@+id/password_box" />
@@ -23,11 +24,11 @@
         android:id="@+id/password_box"
         android:layout_width="340dp"
         android:layout_height="48dp"
+        android:background="@drawable/text_view_border"
         android:ems="10"
         android:hint="@string/password_input"
         android:inputType="textPassword"
         android:textSize="21sp"
-        android:background="@drawable/text_view_border"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,10 +38,10 @@
         android:id="@+id/login_btn"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#8731DB"
         android:text="@string/login_btn"
         android:textSize="24sp"
-        android:backgroundTint="#8731DB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_box" />
@@ -56,5 +57,40 @@
         app:layout_constraintStart_toStartOf="@+id/email_box"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_compass" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/forget_password"
+        android:textColor="@color/link_blue"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/password_box"
+        app:layout_constraintTop_toBottomOf="@+id/password_box" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account? " />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regiseter Now"
+            android:textColor="@color/link_blue"
+            android:textStyle="italic" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

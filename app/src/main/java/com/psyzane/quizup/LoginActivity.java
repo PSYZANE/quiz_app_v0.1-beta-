@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.regex.Matcher;
@@ -26,6 +27,15 @@ public class LoginActivity extends AppCompatActivity {
             // TO-DO: Working
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
+        });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+
         });
 
         loginButton.setOnClickListener(v -> {
@@ -57,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    //Check whether the password contain a alphabet, number and special character
     private static boolean hasAllTypesOfCharacters(String str) {
         if (str == null || str.trim().isEmpty()) {
             return false; // Or throw an exception, depending on your requirements
