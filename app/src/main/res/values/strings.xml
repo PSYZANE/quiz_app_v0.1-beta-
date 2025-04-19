@@ -13,12 +13,12 @@
     <string name="confirm_password">confirm password</string>
 
     <!--  login/Registration input  -->
-    <string name="name_input">Enter a Username</string>
-    <string name="name_email_input">Enter Username or email</string>
-    <string name="email_input">Enter email</string>
-    <string name="password_input">Enter a password</string>
+    <string name="name_input">Create a Username</string>
+    <string name="name_email_input">Username or email</string>
+    <string name="email_input">Email</string>
+    <string name="password_input">Password</string>
     <string name="con_password_input">Re-enter password</string>
-    <string name="forget_password">Forget password?</string>
+    <string name="forgot_password">Forgot password?</string>
 
     <!--  login/Registration button  -->
     <string name="login_btn">Login</string>

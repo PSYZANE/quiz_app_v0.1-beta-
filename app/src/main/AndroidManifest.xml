@@ -21,10 +21,6 @@
             android:exported="false"
             android:theme="@style/Theme.QuizUp" />
         <activity
-            android:name=".TestActivity"
-            android:exported="false"
-            android:theme="@style/Theme.QuizUp" />
-        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

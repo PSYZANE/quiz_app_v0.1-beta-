@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     android:background="@color/sky_blue">
 
+    <TextView
+        android:id="@+id/sign_up_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WELCOME BACK"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/email_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93" />
+
     <EditText
         android:id="@+id/email_box"
         android:layout_width="340dp"
@@ -16,12 +29,12 @@
         android:hint="@string/name_email_input"
         android:inputType="text"
         android:textSize="21sp"
-        app:layout_constraintBottom_toTopOf="@+id/password_box"
-        app:layout_constraintEnd_toEndOf="@+id/password_box"
-        app:layout_constraintStart_toStartOf="@+id/password_box" />
+        app:layout_constraintBottom_toTopOf="@+id/create_password_box"
+        app:layout_constraintEnd_toEndOf="@+id/create_password_box"
+        app:layout_constraintStart_toStartOf="@+id/create_password_box" />
 
     <EditText
-        android:id="@+id/password_box"
+        android:id="@+id/create_password_box"
         android:layout_width="340dp"
         android:layout_height="48dp"
         android:background="@drawable/text_view_border"
@@ -35,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/login_btn"
+        android:id="@+id/sign_up_btn"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -44,30 +57,30 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_box" />
+        app:layout_constraintTop_toBottomOf="@+id/create_password_box" />
 
     <ImageButton
         android:id="@+id/back_btn"
-        android:layout_width="56dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="-16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginTop="16dp"
         android:contentDescription="Back to Guest login page"
-        app:layout_constraintDimensionRatio="h,1:1"
         app:layout_constraintStart_toStartOf="@+id/email_box"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_compass" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/forget_password"
+        android:text="@string/forgot_password"
         android:textColor="@color/link_blue"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="@+id/password_box"
-        app:layout_constraintTop_toBottomOf="@+id/password_box" />
+        app:layout_constraintBottom_toTopOf="@+id/sign_up_btn"
+        app:layout_constraintEnd_toEndOf="@+id/create_password_box"
+        app:layout_constraintTop_toBottomOf="@+id/create_password_box"
+        app:layout_constraintVertical_bias="0.33" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -85,10 +98,10 @@
             android:text="Don't have an account? " />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/register_now"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Regiseter Now"
+            android:text="Register Now"
             android:textColor="@color/link_blue"
             android:textStyle="italic" />
     </LinearLayout>

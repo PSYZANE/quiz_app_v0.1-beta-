@@ -67,7 +67,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/postContentTextView"
+        android:id="@+id/quesResultContentTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:contentDescription="@string/post_content_description"

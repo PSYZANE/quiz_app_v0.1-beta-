@@ -5,7 +5,7 @@
     <stroke
         android:width="2dp"
         android:color="@color/light_blue" /> <!-- Border color and width (black, 2dp) -->
-    <corners android:radius="8dp" /> <!-- Rounded corners (optional) -->
+    <corners android:radius="14dp" /> <!-- Rounded corners (optional) -->
     <padding
         android:bottom="12dp"
         android:left="12dp"

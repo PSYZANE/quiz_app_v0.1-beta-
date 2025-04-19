@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,7 +44,7 @@ public class test extends LinearLayout {
         //Inflate the layout
         View view = LayoutInflater.from(context).inflate(R.layout.activity_home, this, true);
 
-        recyclerView = view.findViewById(R.id.postsRecyclerView);
+        recyclerView = view.findViewById(R.id.testListRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         postAdapter = new PostAdapter(posts);
         recyclerView.setAdapter(postAdapter);
@@ -56,9 +57,10 @@ public class test extends LinearLayout {
 
         scrollListener = new RecyclerView.OnScrollListener() {
             @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
                 LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                assert layoutManager != null;
                 int visibleItemCount = layoutManager.getChildCount();
                 int totalItemCount = layoutManager.getItemCount();
                 int firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition();
