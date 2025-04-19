@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Login Page
-        Button loginButton = findViewById(R.id.login_btn);
+        Button loginButton = findViewById(R.id.sign_up_btn);
         loginButton.setOnClickListener(v -> {
             // TO-DO: Working
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Button registerButton = findViewById(R.id.register_btn);
         registerButton.setOnClickListener(v -> {
             //TO-DO: Working
-            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
             startActivity(intent);
         });
 
@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         doubleBackToExitPressedOnce = false;
-                        }
-                    }, DOUBLE_BACK_PRESS_DELAY);
+                    }
+                }, DOUBLE_BACK_PRESS_DELAY);
             }
         });
     }
